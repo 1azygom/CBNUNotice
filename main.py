@@ -88,11 +88,14 @@ for i in range(10):
     tbody = table.find("tbody")
     tr_list = tbody.find_all("tr")
     for tr in tr_list:
-        notice_number = int(tr.find('th').get_text().strip())
-        if latest_notice == 0:
+        notice_number = int(tr.find('td', {'class': 'left'}).find('a')['href'].split('=')[-1])
+        if latest_notice < notice_number:
             latest_notice = notice_number
         if notice_number <= before_notice:
-            break
+            if tr.find('th').find('img') is None:
+                break;
+            else:
+                continue;
         td_list = tr.find_all('td')
         notice_group = td_list[0].find('span').get_text().strip()
         notice_subject = td_list[1].find('a').get_text().strip()
