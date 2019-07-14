@@ -22,7 +22,7 @@ def send_notice(notice_list):
 	    <table align="center" border="0" cellpadding="0" cellspacing="0" width="600" style="border-collapse: collapse; font-family: sans-serif;">
 		<tr style="border-bottom: 0.1rem solid #cccccc">
 		    <td style="padding: 0.5rem">
-			<a href="http://chonbuk.ac.kr/kor"><img src="http://chonbuk.ac.kr/kor/images/logo_tr.png" width="150" height="42" style="display: block;"></a>
+			<a href="http://jbnu.ac.kr/kor"><img src="http://jbnu.ac.kr/kor/images/logo_tr.png" width="150" height="42" style="display: block;"></a>
 		    </td>
 		</tr>
 		<tr style="border-bottom: 0.1rem solid #cccccc">
@@ -41,7 +41,7 @@ def send_notice(notice_list):
 				    {0}
 				</td>
 				<td width="65%" style="word-break:break-all; padding: 0.5rem; font-size: 1.0rem;" wrap="hard">
-				    <a style="color: black" href="http://chonbuk.ac.kr/kor/?menuID=139&mode=view&no={1}">{2}</a>
+				    <a style="color: black" href="http://jbnu.ac.kr/kor/?menuID=139&mode=view&no={1}">{2}</a>
 				</td>
 				<td width="20%" style="text-align: center;">
 				    <span style="font-size: 0.85rem">{3}</span>
@@ -80,7 +80,7 @@ notice_list = []
 latest_notice = 0
 
 for i in range(10):
-    req = requests.get('http://chonbuk.ac.kr/kor/?menuID=139&pno=' + str(i + 1))
+    req = requests.get('http://jbnu.ac.kr/kor/?menuID=139&pno=' + str(i + 1))
     req.encoding = 'utf-8'
     
     soup = BeautifulSoup(req.text, 'html.parser')
