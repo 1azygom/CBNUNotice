@@ -54,7 +54,7 @@ def send_notice(notice_list):
 		</tr>
                 <tr>
 		    <td style="padding: 0.5rem">
-			<p style="float: right; margin: 0; font-size: 0.8rem">Copyright ⓒ 1998-2017 Chonbuk National University. All rights reserved.</p>
+			<p style="float: right; margin: 0; font-size: 0.8rem">Copyright ⓒ 1998-2019 Jeonbuk National University. All rights reserved.</p>
 		    </td>
 		</tr>
 	    </table>
